@@ -4,71 +4,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="CALCULATOR.CSS">
 </head>
 <body>
-    <h1 align="center">TIME TABLE</h1>
-    <table border="2px">
-        
-        <tr>
-            <th>DAY/PERIOD</th>
-            <th>I <br>9:30-10:20</th>
-            <th>ii <br>10:20-11:10</th>
-            <th>iii <br>11:00-12:00</th>
-            <th>iv <br>12:00-12:40</th>
-            <th>v <br>12:40-1:30</th>
-            <th>vi <br>1:30-2:20</th>
-            <th>vii <br>2:20-3:10</th>
-            <th>viii <br>3:10-4:00</th>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Eng</td>
-            <td>Mat</td>
-            <td>Che</td>
-            <td  rowspan="5">lunch</td>
-            <td colspan="3">lab</td>
-            
-            <td>phy</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td colspan="3">LAB</td>
-            <td>Eng</td>
-            <td>chem</td>
-            <td>Mat</td>
-            <td>Sports</td>
+    <div.row>
+        <div class="col-4" style="height:100px; width: 265px; margin-left: 150px; margin-top:150px; padding-bottom:115px;padding-top:25px; background-color: rgb(26, 20, 20); border-top-left-radius: 12px;border-top-right-radius: 12px; " >
          
-        </tr>
-        <tr>
-            <td>Wednesday</td>
-            <td>mat</td>
-            <td>phy</td>
-            <td>eng</td>
-            <td>chem</td>
-            <td colspan="3">lib</td>
-            
-            
-        </tr>
-        <tr>
-           <td>
-            Thursday
-           </td>
-           <td>phy</td>
-           <td>eng</td>
-           <td>che</td>
-           
-           <td colspan="3">lab</td>
-           <td>mat</td>
-        </tr>
-        <tr>
-            <td>friday</td>
-            <td>phy</td>
-            <td>eng</td>
-            <td>che</td>
-            <td colspan="3">lab</td>
-            
-            <td>math</td>
-        </tr>
-    </table>
+
+
+
+
+         <div style=" padding-left: 22px;padding-top: 25px; padding-bottom:26px;margin-bottom: 25px; background-color:rgb(66, 61, 61);padding-right: 17px;margin-right: 21px;margin-left: 17px; border-top-right-radius:0!important;">
+        <input type="text " id="result" placeholder="4+4=8" class="form-control">
+      
+        </div>
+        <div id="cs2" style=" padding:20px; background-color:rgb(98, 98, 59); border-radius:8px;border-top-left-radius: 0; border-top-right-radius: 0; ">
+            <div class="row" style="padding:10px;">
+                <div class="col-3">
+                    <button id="cs1" onclick="clearbox('a/C')">a/C</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('%')">%</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('CE')">CE</button>
+                </div>
+                <div class="col-3">
+                    <button id="cs3" onclick="clearfirst('C')">C</button>
+                </div>
+            </div>
+            <div class="row"style="padding:10px;">
+                <div class="col-3">
+                    <button onclick="displayNumaber(7)">7</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(8)">8</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(9)">9</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('-')">-</button>
+                </div>
+            </div><div class="row"style="padding:10px;">
+                <div class="col-3">
+                    <button onclick="displayNumaber(4)">4</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(5)">5</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(6)">6</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('/')">/</button>
+                </div>
+            </div><div class="row"style="padding:10px">
+                <div class="col-3">
+                    <button onclick="dispalyNumaber(1)">1</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(2)">2</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber(3)">3</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('*')">X</button>
+                </div>
+            </div><div class="row" style="padding:10px;">
+                <div class="col-3">
+                    <button onclick="displayNumaber(0)">0</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('.')">.</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="evaluateexpression()">=</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="displayNumaber('+')">+</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div.row>
+    <script src="./calculator.js">
+
+    </script>
 </body>
 </html>
